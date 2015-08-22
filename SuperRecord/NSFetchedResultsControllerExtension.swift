@@ -99,7 +99,7 @@ public extension NSFetchedResultsController {
         return superFetchedResultsController(entityName, sectionNameKeyPath: sectionNameKeyPath, sortDescriptors: sortDescriptors as [AnyObject], predicate:nil, delegate: delegate)
     }
     
-    private class func superFetchedResultsController(entityName: String!, sectionNameKeyPath: String?, sortDescriptors: [AnyObject]?, predicate: NSPredicate?, delegate: NSFetchedResultsControllerDelegate, context: NSManagedObjectContext! = SuperCoreDataStack.defaultStack.managedObjectContext!) -> NSFetchedResultsController {
+    private class func superFetchedResultsController(entityName: String!, sectionNameKeyPath: String?, sortDescriptors: [AnyObject]?, predicate: NSPredicate?, delegate: NSFetchedResultsControllerDelegate, context: NSManagedObjectContext!) -> NSFetchedResultsController {
         
         let fetchRequest = NSFetchRequest(entityName: entityName)
         fetchRequest.entity = NSEntityDescription.entityForName(entityName, inManagedObjectContext: context)
